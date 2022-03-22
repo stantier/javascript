@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+function getData(a1,a2){  // function with parameters
+return res=a1+a2
+}
+let result=getData(10,20)
+//document.write(result)
+console.log(result)
+
+
+// Function with default parameters
+function test(a,b=10){   
+
+    document.write("hello....")
+    let sum=a+b;
+
+    document.write(`the value of sum= ${sum}`)
+}
+
+test(34,20)  // calling a function
+
+// Rest Parameters
+
+function add(x,y,...args){
+document.write(x+"<br />")
+document.write(y+"<br />")
+document.write(args)
+}
+add(23,12,34,24,56,45);
+
+
+
+
+    </script>
+
+
+
+
+
+</body>
+</html>

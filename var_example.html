@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //Var 
+        // =============redeclare  var  & reassign value=======================
+        var cname="Antier Solutions";  
+         var cname="Antier Pvt ltd"
+       // document.write("My company name is="+cname + "<br /")
+       
+        console.log(`My Company name is =${cname} `)
+
+        // Function Scoped
+        var a=50; // global scope
+        function f1(){
+            var a=10; //local scope
+            console.log(a)
+        }
+        console.log(a)
+        f1();
+
+ // Hoisting======================================================
+
+        // declaration with var is hoisted 
+a = 5;
+console.log(a);
+var a; // 5
+
+// initializations are not hoisted. 
+console.log(a);
+var a = 5;
+
+        //let =================================================================
+// cant'redeclare var but reassign value
+        let technology="ReactJs";  
+            technology="NodeJs"
+        console.log(`I'm enrolled in =${technology} Technology `)
+
+ 
+
+        // Blocked scope
+
+        for (let i = 0; i < 3; i++) {
+  console.log(i);
+}
+console.log(i); // 0 1 2
+
+for (var i = 0; i < 3; i++) {
+  console.log(i);
+}
+
+console.log(i);  // 0 1 2 3
+
+
+// Hoisting with let 
+
+a = 5;
+console.log(a);
+let a; // error
+
+// const=========================================================================================
+// can't redeclare var neither reassign value
+const firstname="Rajbir"; 
+//const firstname="Sumit"
+//firstname="Rohan"
+console.log("My name is=",firstname)
+
+// blocked scope 
+
+function test(){
+    if(true){
+        var tech1="JavaScript"
+        let tech2="Reactjs"
+        const tech3="Nodejs"
+        console.log("With in if statement:")
+        console.log(tech1)
+        console.log(tech2)
+        console.log(tech3)
+
+    }
+    console.log("Outside of if statement:")
+    console.log(tech1)
+    console.log(tech2)
+    console.log(tech3)
+
+}
+test()
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript - for...in loop</title>
+</head>
+<body>
+    <h2> For Loop</h2>
+    <script>
+    // for (var i = 0; i < 5; i++) {
+    //     let name = "John";
+    //    document.write("Hi " + name +"<br />");
+    //   }
+    </script>
+    <h2>Using for...in loop in javascript</h2>
+    
+    
+    <p id="output">test</p>
+
+
+    <script>
+        var car = { name: "ford", color: "black", model: "mustang" }
+        let i;
+        for (i in car) { // i represent properties of car 
+            document.getElementById("output").innerHTML ="hiiii";
+        }
+    </script>
+
+
+    <h2>Using For of Loop</h2>
+    <p id="output1"></p>
+    <script>
+        var fruits = ["Apple", "Banana", "Carrot", "Guava", "Orange",23];
+        let j;
+        for (j of fruits) { // i represent 1 value of fruit 
+            document.getElementById("output1").innerHTML += j + "<br>";
+        }
+    </script>
+</body>
+</html>
