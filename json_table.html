@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+</head>
+<body>
+    <div class="container">
+    <table class="table" id="showData">
+        <thead>
+          <tr>
+            <th>EmployeeID</th>
+            <th>EmployeeName</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>Country</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>john@example.com</td>
+          </tr>
+        
+        </tbody>
+      </table>
+    </div>
+    <script>
+       
+    var employess = [
+            {
+                "EmployeeID": "1",
+                "EmployeeName": "Hanari Carnes",
+                "Address": "Rua do Paço, 67",
+                "City": "Rio de Janeiro",
+                "Country": "Brazil"
+            },
+            {
+                "EmployeeID": "2",
+                "EmployeeName": "Wolski",
+                "Address": "ul. Filtrowa 68",
+                "City": "Walla",
+                "Country": "Poland"
+            },
+            {
+                "EmployeeID": "3",
+                "EmployeeName": "Lehmanns Marktstand",
+                "Address": "Magazinweg 7",
+                "City": "Frankfurt a.M.",
+                "Country": "Germany"
+            }
+            ,
+            {
+                "EmployeeID": "4",
+                "EmployeeName": "Let's Stop N Shop",
+                "Address": "87 Polk St. Suite 5",
+                "City": "San Francisco",
+                "Country": "USA"
+            },
+            {
+                "EmployeeID": "5",
+                "EmployeeName": "Lazy K Kountry Store",
+                "Address": "12 Orchestra Terrace",
+                "City": "Walla Walla",
+                "Country": "USA"
+            }
+            ,
+            {
+                "EmployeeID": "6",
+                "EmployeeName": "Island Trading",
+                "Address": "Garden House Crowther Way",
+                "City": "Cowes",
+                "Country": "UK"
+            }
+    ]
+
+
+    function getData(records){
+            for(let i=0;i<records.length;i++){
+            let row=`<tr>
+                <td>${records[i].EmployeeID}</td>
+                <td>${records[i].EmployeeName}</td>
+                <td>${records[i].Address}</td>
+                <td>${records[i].City}</td>
+                <td>${records[i].Country}</td>
+                </tr>`
+                document.getElementById("showData").innerHTML+=row;
+        }
+        
+    }
+   
+    
+    getData(employess)
+    </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

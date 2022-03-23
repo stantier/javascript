@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let arr=[2,4,6,8,10];
+
+        let arr1=[];
+        let count=arr.length;
+        console.log(count)
+        for(let i=0;i<count;i++){
+            arr1[i]=arr[i]*2
+           
+        }
+        document.write(`${arr1}`)
+
+
+
+        // with map function
+
+        let data=[1,2,3,4,5]
+
+
+        let result=data.map(function(val){
+            return val*5
+        })
+        console.log(result)
+
+
+        // with Arrow function
+
+        let res=data.map((val1)=>val1*2 );
+        console.log(res)
+
+
+
+        // get string value
+        let emps=["Raj","komal","sumit","sonia"];
+        let empsname=emps.map((getData)=>console.log(getData))
+
+
+        // Filter in array
+        let salary=[10000,12000,23000,5000,8000,35000]
+        let getSalary=salary.filter(a1=>{
+            return a1>10000
+            
+        })
+        console.log(getSalary)
+
+
+        // 
+        let company=[
+            {
+                ename:"Sumit Rana",
+                designation:"Web Developer",
+                salary:26000,
+                empcode:'st123'
+            },
+            {
+                ename:"Raman",
+                designation:"Web Designer",
+                salary:12000,
+                empcode:'st125'
+            },
+            {
+                ename:"Sonal",
+                designation:"Tester",
+                salary:16000,
+                empcode:'st126'
+            },
+            {
+                ename:"Sumit Rana",
+                designation:"Software Developer",
+                salary:30000,
+                empcode:'st127'
+            },
+            {
+                ename:"Mohit Rana",
+                designation:"Tester",
+                salary:20000,
+                empcode:'st129'
+            }
+        ]
+        let empdetails=company.filter(getdetails=>getdetails.designation=='Tester');
+            //console.log(getdetails)
+
+    
+        console.log(empdetails)
+
+
+        // this keyword reference object
+
+        var empsRecord={
+            empid:101,
+            ename:"Rajat",
+            department:"admin",
+            fulldetails:function(){
+                return ename +" "+department;
+            }
+        };
+        console.log(empsRecord.fulldetails())
+
+
+    </script>
+</body>
+</html>
