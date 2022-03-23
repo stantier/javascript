@@ -80,23 +80,38 @@
             }
     ]
 
+// using simple function
+    // function getData(records){
+    //         for(let i=0;i<records.length;i++){
+    //         let row=`<tr>
+    //             <td>${records[i].EmployeeID}</td>
+    //             <td>${records[i].EmployeeName}</td>
+    //             <td>${records[i].Address}</td>
+    //             <td>${records[i].City}</td>
+    //             <td>${records[i].Country}</td>
+    //             </tr>`
+    //             document.getElementById("showData").innerHTML+=row;
+    //     }
+        
+    // }
+   
+  //getData(employess)
 
-    function getData(records){
-            for(let i=0;i<records.length;i++){
-            let row=`<tr>
-                <td>${records[i].EmployeeID}</td>
-                <td>${records[i].EmployeeName}</td>
-                <td>${records[i].Address}</td>
-                <td>${records[i].City}</td>
-                <td>${records[i].Country}</td>
+
+    // using map function
+    let getdata=employess.map((records)=>{
+      //console.log(records.EmployeeID)
+      let row=`<tr>
+                <td>${records.EmployeeID}</td>
+                <td>${records.EmployeeName}</td>
+                <td>${records.Address}</td>
+                <td>${records.City}</td>
+                <td>${records.Country}</td>
                 </tr>`
                 document.getElementById("showData").innerHTML+=row;
-        }
-        
-    }
-   
+    })
     
-    getData(employess)
+  
     </script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
