@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+   
+  <!DOCTYPE html>  
+  <html>  
+  <head>  
+   <title>Form in HTML</title>  
+ </head>  
+  <body>  
+    <div  class="container">
+      <h2>Registration form</h2>  
+
+    
+
+     <form method="post" id="regform">  
+      <fieldset>  
+         <legend>User personal information</legend>  
+         <label>Enter your full name</label><br>  
+         <input type="text" name="first_name"  id="first_name" value=""><br>  
+         <label>Enter your Last Name</label><br>  
+         <input type="text" name="last_name"  id="last_name" value=""><br>  
+          <label>Enter your email</label><br>  
+          <input type="email" name="email"  id="email" value=""><br>  
+        
+         
+          
+          
+
+          <input type="button" value="sign-up" onclick="addNew()" >  
+      </fieldset>  
+   </form>  
+
+   <hr />
+ 
+    <button class="btn btn-success" type="button" onclick="addNew()">Add New</button>
+     <table class="table" id="showData" >
+         <thead>
+           <tr>
+             <th scope="col">Id</th>
+             <th scope="col">First</th>
+             <th scope="col">Last</th>
+             <th scope="col">Email</th>
+             <th scope="col" colspan="2">Action</th>
+           </tr>
+         </thead>
+         <tbody>
+         
+         </tbody>
+       </table>
+ </div>
+  </body>  
+ </html>  
+<script src="main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
